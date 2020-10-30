@@ -159,14 +159,8 @@ String SendHTML(float Temperaturestat, float Humiditystat, float ConsigneTstat) 
   if (isnan(Temperaturestat)) {ptr += "N/A";} else {ptr += (float)Temperaturestat;}
   ptr += "&deg;C</p>";
   ptr += "<p>Humidity: ";
-  if (isnan(Humiditystat)) {
-    ptr += "N/A";
-  }
-  else {
-    ptr += (int)Humiditystat;
-  }
+  if (isnan(Humiditystat)) {ptr += "N/A";} else {ptr += (int)Humiditystat;}
   ptr += "%</p>";
-
   ptr += "<h1>REGULATION:</h1>\n";
   ptr += "<h1>";
   ptr += (int)ConsigneTstat;
